@@ -22,16 +22,16 @@ services:
     labels:
       traefik.enable: "true"
       traefik.docker.network: "inverseproxy_shared"
-      traefik.http.routers.ibatix-${CLIENT_NAME}.rule: "Host(`${DOMAIN}`)"
-      traefik.http.routers.ibatix-${CLIENT_NAME}.entrypoints: "websecure"
-      traefik.http.routers.ibatix-${CLIENT_NAME}.tls.certresolver: "letsencrypt"
-      traefik.http.routers.ibatix-${CLIENT_NAME}.service: "ibatix-${CLIENT_NAME}"
-      traefik.http.services.ibatix-${CLIENT_NAME}.loadbalancer.server.port: "8069"
-      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.rule: "Host(`${DOMAIN}`) && PathPrefix(`/longpolling`, `/websocket`)"
-      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.entrypoints: "websecure"
-      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.tls.certresolver: "letsencrypt"
-      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.service: "ibatix-${CLIENT_NAME}-lp"
-      traefik.http.services.ibatix-${CLIENT_NAME}-lp.loadbalancer.server.port: "8072"
+      traefik.http.routers.ibatix-app.rule: "Host(`${DOMAIN}`)"
+      traefik.http.routers.ibatix-app.entrypoints: "websecure"
+      traefik.http.routers.ibatix-app.tls.certresolver: "letsencrypt"
+      traefik.http.routers.ibatix-app.service: "ibatix-app"
+      traefik.http.services.ibatix-app.loadbalancer.server.port: "8069"
+      traefik.http.routers.ibatix-lp.rule: "Host(`${DOMAIN}`) && PathPrefix(`/longpolling`, `/websocket`)"
+      traefik.http.routers.ibatix-lp.entrypoints: "websecure"
+      traefik.http.routers.ibatix-lp.tls.certresolver: "letsencrypt"
+      traefik.http.routers.ibatix-lp.service: "ibatix-lp"
+      traefik.http.services.ibatix-lp.loadbalancer.server.port: "8072"
 
   db:
     extends:
