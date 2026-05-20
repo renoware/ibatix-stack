@@ -18,6 +18,9 @@ ibatix:
   - ibatix_solar
   - ibatix_pac
   - ibatix_calcul_cee
+
+oca-partner-contact:
+  - partner_firstname
   - ibatix_mandat_anah
   - ibatix_intervention
   - ibatix_photos

@@ -16,3 +16,12 @@
   target: ibatix main
   merges:
     - ibatix main
+
+./oca-partner-contact:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    oca: https://github.com/OCA/partner-contact.git
+  target: oca 19.0
+  merges:
+    - oca 19.0
