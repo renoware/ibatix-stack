@@ -1,1 +1,6 @@
-# See syntax in https://www.ssh.com/ssh/config/ and `man ssh_config`
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile /opt/odoo/custom/ssh/id_rsa
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
