@@ -13,6 +13,6 @@
     depth: $DEPTH_DEFAULT
   remotes:
     ibatix: git@github.com:renoware/ibatix.git
-  target: ibatix $IBATIX_BRANCH
+  target: ibatix main
   merges:
-    - ibatix $IBATIX_BRANCH
+    - ibatix main
