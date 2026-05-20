@@ -92,7 +92,9 @@ echo "  → Read-only suffit"
 echo "============================================================"
 cat "$SSH_KEY.pub"
 echo "============================================================"
-read -rp "Appuie sur ENTRÉE quand la deploy key est ajoutée."
+if [[ -z "${IBATIX_NON_INTERACTIVE:-}" ]]; then
+  read -rp "Appuie sur ENTRÉE quand la deploy key est ajoutée."
+fi
 
 #-----------------------------------------------------------------------
 # 4. Secrets locaux (jamais commités)
