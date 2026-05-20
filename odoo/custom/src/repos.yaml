@@ -25,3 +25,12 @@
   target: oca 19.0
   merges:
     - oca 19.0
+
+./muk-web:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    renoware: git@github.com:renoware/muk-web-19.git
+  target: renoware 19.0
+  merges:
+    - renoware 19.0
