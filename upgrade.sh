@@ -29,10 +29,11 @@ docker compose -f prod.yaml build --pull
 log "Arrêt Odoo (laisse Postgres up)"
 docker compose -f prod.yaml stop odoo
 
-log "Upgrade modules : $MODULES"
+log "Install/upgrade modules : $MODULES"
 docker compose -f prod.yaml run --rm odoo odoo \
   --stop-after-init --no-http \
   -d prod \
+  -i "$MODULES" \
   -u "$MODULES"
 
 log "Redémarrage Odoo"
