@@ -1,0 +1,60 @@
+services:
+  odoo:
+    extends:
+      file: common.yaml
+      service: odoo
+    restart: unless-stopped
+    env_file:
+      - .docker/odoo.env
+      - .docker/db-access.env
+    environment:
+      DB_FILTER: "^prod$$"
+      DOODBA_ENVIRONMENT: "prod"
+      INITIAL_LANG: "fr_FR"
+      LIST_DB: "false"
+      ODOO_BUS_PUBLIC_SAMESITE_WS: 1
+      PGHOST: ibatix-stack-prod-db
+    depends_on:
+      - db
+    networks:
+      default:
+      inverseproxy_shared:
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: "inverseproxy_shared"
+      traefik.http.routers.ibatix-${CLIENT_NAME}.rule: "Host(`${DOMAIN}`)"
+      traefik.http.routers.ibatix-${CLIENT_NAME}.entrypoints: "websecure"
+      traefik.http.routers.ibatix-${CLIENT_NAME}.tls.certresolver: "letsencrypt"
+      traefik.http.routers.ibatix-${CLIENT_NAME}.service: "ibatix-${CLIENT_NAME}"
+      traefik.http.services.ibatix-${CLIENT_NAME}.loadbalancer.server.port: "8069"
+      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.rule: "Host(`${DOMAIN}`) && PathPrefix(`/longpolling`, `/websocket`)"
+      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.entrypoints: "websecure"
+      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.tls.certresolver: "letsencrypt"
+      traefik.http.routers.ibatix-${CLIENT_NAME}-lp.service: "ibatix-${CLIENT_NAME}-lp"
+      traefik.http.services.ibatix-${CLIENT_NAME}-lp.loadbalancer.server.port: "8072"
+
+  db:
+    extends:
+      file: common.yaml
+      service: db
+    environment:
+      DB_HOST: ibatix-stack-prod-db
+    env_file:
+      - .docker/db-creation.env
+    restart: unless-stopped
+    networks:
+      default:
+        aliases:
+          - "ibatix-stack-prod-db"
+
+networks:
+  default:
+    driver_opts:
+      encrypted: 1
+
+  inverseproxy_shared:
+    external: true
+
+volumes:
+  filestore:
+  db:

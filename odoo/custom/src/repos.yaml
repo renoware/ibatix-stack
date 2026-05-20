@@ -1,0 +1,18 @@
+./odoo:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ocb: https://github.com/OCA/OCB.git
+    odoo: https://github.com/odoo/odoo.git
+  target: ocb $ODOO_VERSION
+  merges:
+    - ocb $ODOO_VERSION
+
+./ibatix:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ibatix: git@github.com:renoware/ibatix.git
+  target: ibatix $IBATIX_BRANCH
+  merges:
+    - ibatix $IBATIX_BRANCH
