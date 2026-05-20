@@ -50,6 +50,18 @@ if ! command -v docker &>/dev/null; then
   systemctl enable --now docker
 fi
 
+# Docker daemon : autoriser API ≥ v1.24 (sinon Traefik 3.x avec lib moby legacy plante)
+if ! grep -q DOCKER_MIN_API_VERSION /etc/systemd/system/docker.service.d/*.conf 2>/dev/null; then
+  log "Configuration Docker daemon : DOCKER_MIN_API_VERSION=1.24"
+  mkdir -p /etc/systemd/system/docker.service.d
+  cat >/etc/systemd/system/docker.service.d/api-version.conf <<EOF
+[Service]
+Environment=DOCKER_MIN_API_VERSION=1.24
+EOF
+  systemctl daemon-reload
+  systemctl restart docker
+fi
+
 #-----------------------------------------------------------------------
 # 2. Pare-feu (80/443/22)
 #-----------------------------------------------------------------------
