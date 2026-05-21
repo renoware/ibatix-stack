@@ -160,8 +160,8 @@ log "Build de l'image Doodba (clone OCB + ibatix, takes a few min)"
 cd "$STACK_DIR"
 docker compose -f prod.yaml build
 
-log "Démarrage des conteneurs odoo + db"
-docker compose -f prod.yaml up -d
+log "Démarrage de Postgres uniquement (odoo viendra après init DB)"
+docker compose -f prod.yaml up -d db
 
 log "Attente que Postgres soit prêt"
 for i in {1..30}; do
@@ -173,16 +173,20 @@ done
 
 #-----------------------------------------------------------------------
 # 7. Init DB + installation des modules de base IBATIX
+#     Pattern doodba : init via `run --rm` (container temp dédié),
+#     PUIS `up -d odoo` pour le service permanent. Évite la race
+#     condition entre l'HTTP serveur et l'init quand on utilisait
+#     `exec` sur un container odoo déjà running.
 #-----------------------------------------------------------------------
 log "Initialisation de la base 'prod' + installation des modules de base"
-docker compose -f prod.yaml exec -T odoo odoo \
+docker compose -f prod.yaml run --rm odoo odoo \
   --stop-after-init --no-http \
   -d prod \
   -i base,ibatix_theme,ibatix_home,ibatix_champs,ibatix_identity,ibatix_siret,ibatix_gov_api,ibatix_document,ibatix_usage_client \
   --load-language=fr_FR
 
-log "Redémarrage final"
-docker compose -f prod.yaml restart odoo
+log "Démarrage du service Odoo (DB initialisée)"
+docker compose -f prod.yaml up -d odoo
 
 # Marker de fin — provision.yml (Ansible) le check via `creates:`
 # pour ne skipper install.sh QUE si tout est allé jusqu'au bout.
