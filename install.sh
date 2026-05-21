@@ -184,6 +184,10 @@ docker compose -f prod.yaml exec -T odoo odoo \
 log "Redémarrage final"
 docker compose -f prod.yaml restart odoo
 
+# Marker de fin — provision.yml (Ansible) le check via `creates:`
+# pour ne skipper install.sh QUE si tout est allé jusqu'au bout.
+date -u +"%Y-%m-%dT%H:%M:%SZ" > "$STACK_DIR/.provisioned"
+
 echo
 echo "============================================================"
 echo "  Installation terminée."
