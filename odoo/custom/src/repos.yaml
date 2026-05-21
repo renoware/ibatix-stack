@@ -34,3 +34,12 @@
   target: renoware 19.0
   merges:
     - renoware 19.0
+
+./ibatix-seed-data:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    renoware: https://github.com/renoware/ibatix-seed-data.git
+  target: renoware 19.0
+  merges:
+    - renoware 19.0

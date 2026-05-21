@@ -47,3 +47,6 @@ muk-web:
   - muk_web_group
   - muk_web_refresh
   - muk_web_theme
+
+ibatix-seed-data:
+  - ibatix_seed_data
