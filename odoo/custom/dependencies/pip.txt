@@ -1,3 +1,12 @@
 git+https://github.com/OCA/openupgradelib.git@master
 unicodecsv
 unidecode
+
+# Pipeline LiDAR HD (ibatix_solar) — présents sur PROD via pip install manuel
+# jamais capturé nulle part, d'où l'absence sur la flotte (numpy manquant).
+numpy==2.4.4
+laspy==2.7.0
+lazrs==0.8.1
+scipy==1.17.1
+scikit-learn==1.8.0
+pyproj==3.7.2
