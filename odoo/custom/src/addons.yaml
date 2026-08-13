@@ -36,6 +36,27 @@ ibatix:
   - ibatix_website
   - inies_connector
   - objets_ibatix
+  - ibatix_chantier
+  - ibatix_chantier_solar
+  - ibatix_copilote
+  - ibatix_cvc
+  - ibatix_dechets
+  - ibatix_devis_chromium
+  - ibatix_droits
+  - ibatix_financement
+  - ibatix_formation
+  - ibatix_partner_confidentialite
+  - ibatix_pdf_template
+  - ibatix_portal
+  - ibatix_projet
+  - ibatix_rdv
+  - ibatix_reception
+  - ibatix_report_chromium
+  - ibatix_rh_roles
+  - ibatix_schema_installation
+  - ibatix_tva_travaux
+  - ibatix_vendeur
+  - ibatix_whatsapp
 
 oca-partner-contact:
   - partner_firstname
