@@ -10,3 +10,10 @@ lazrs==0.8.1
 scipy==1.17.1
 scikit-learn==1.8.0
 pyproj==3.7.2
+
+# Cachet cryptographique PAdES des PDF signés (ibatix_sign phase 4).
+# ⚠ pins OBLIGATOIRES : pyhanko récent tire cryptography>=50, en conflit
+# avec pyopenssl 24 (composant Odoo) — même pin que le Dockerfile PROD.
+cryptography==42.0.8
+pyhanko==0.23.2
+pyhanko-certvalidator<0.27
