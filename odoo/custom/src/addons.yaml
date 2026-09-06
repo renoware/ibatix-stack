@@ -1,6 +1,8 @@
 ibatix:
   - ibatix_theme
   - ibatix_home
+  - ibatix_design
+  - ibatix_menuiserie
   - ibatix_champs
   - ibatix_brands
   - ibatix_catalogue

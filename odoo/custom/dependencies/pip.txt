@@ -17,3 +17,6 @@ pyproj==3.7.2
 cryptography==42.0.8
 pyhanko==0.23.2
 pyhanko-certvalidator<0.27
+
+# PDF : ibatix_report_chromium / ibatix_devis_chromium (numérotation, fusion) — présent sur PROD, absent de l'image doodba.
+pypdf==6.10.2
