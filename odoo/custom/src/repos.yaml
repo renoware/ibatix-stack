@@ -1,4 +1,4 @@
-# cache-bust 2026-09-17 — ecrans Owl ajoutes a la liste blanche (client G.R.B)
+# cache-bust 2026-09-18-0020 — ibatix_login_brand
 ./odoo:
   defaults:
     depth: $DEPTH_DEFAULT

@@ -2,6 +2,7 @@ ibatix:
   - ibatix_theme
   - ibatix_home
   - ibatix_design
+  - ibatix_login_brand
   - ibatix_design_devis
   - ibatix_design_crm
   - ibatix_design_chantier
