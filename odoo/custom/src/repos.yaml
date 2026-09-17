@@ -1,3 +1,4 @@
+# cache-bust 2026-09-17 — ecrans Owl ajoutes a la liste blanche (client G.R.B)
 ./odoo:
   defaults:
     depth: $DEPTH_DEFAULT

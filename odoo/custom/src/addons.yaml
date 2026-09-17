@@ -2,6 +2,13 @@ ibatix:
   - ibatix_theme
   - ibatix_home
   - ibatix_design
+  - ibatix_design_devis
+  - ibatix_design_crm
+  - ibatix_design_chantier
+  - ibatix_design_dispatch
+  - ibatix_design_journee
+  - ibatix_design_produit
+  - ibatix_design_rdv
   - ibatix_menuiserie
   - ibatix_champs
   - ibatix_brands
