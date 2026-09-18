@@ -27,6 +27,18 @@ services:
       traefik.http.routers.ibatix-app.tls.certresolver: "letsencrypt"
       traefik.http.routers.ibatix-app.service: "ibatix-app"
       traefik.http.services.ibatix-app.loadbalancer.server.port: "8069"
+      # Gestion des bases : c'est exactement la porte par laquelle le HUB a
+      # ete compromis le 17/09/2026 (base de test listee publiquement, puis
+      # RCE). `list_db=false` ne suffit pas : /web/database/manager repond
+      # quand meme. Seul le HUB peut desormais l'atteindre ; depuis un poste,
+      # passer par un tunnel SSH.
+      traefik.http.routers.ibatix-dbmgr.rule: "Host(`${DOMAIN}`) && PathPrefix(`/web/database`)"
+      traefik.http.routers.ibatix-dbmgr.entrypoints: "websecure"
+      traefik.http.routers.ibatix-dbmgr.tls.certresolver: "letsencrypt"
+      traefik.http.routers.ibatix-dbmgr.priority: "100"
+      traefik.http.routers.ibatix-dbmgr.service: "ibatix-app"
+      traefik.http.routers.ibatix-dbmgr.middlewares: "ibatix-dbmgr-allow"
+      traefik.http.middlewares.ibatix-dbmgr-allow.ipallowlist.sourcerange: "87.106.10.226/32"
       traefik.http.routers.ibatix-lp.rule: "Host(`${DOMAIN}`) && PathPrefix(`/longpolling`, `/websocket`)"
       traefik.http.routers.ibatix-lp.entrypoints: "websecure"
       traefik.http.routers.ibatix-lp.tls.certresolver: "letsencrypt"
