@@ -182,7 +182,7 @@ log "Initialisation de la base 'prod' + installation des modules de base"
 docker compose -f prod.yaml run --rm odoo odoo \
   --stop-after-init --no-http \
   -d prod \
-  -i base,ibatix_theme,ibatix_home,ibatix_champs,ibatix_identity,ibatix_siret,ibatix_gov_api,ibatix_document,ibatix_usage_client \
+  -i base,ibatix_home,ibatix_champs,ibatix_identity,ibatix_siret,ibatix_gov_api,ibatix_document,ibatix_usage_client \
   --load-language=fr_FR
 
 log "Démarrage du service Odoo (DB initialisée)"
