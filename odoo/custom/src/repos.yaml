@@ -1,4 +1,4 @@
-# cache-bust 2026-09-18-0020 — ibatix_login_brand
+# cache-bust 2026-09-18-0130 — perimetre client aligne sur PROD
 ./odoo:
   defaults:
     depth: $DEPTH_DEFAULT

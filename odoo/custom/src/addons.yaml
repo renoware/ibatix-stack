@@ -2,6 +2,13 @@ ibatix:
   - ibatix_theme
   - ibatix_home
   - ibatix_design
+  - ibatix_veille
+  - ibatix_ampleur
+  - ibatix_conformite
+  - ibatix_fluides
+  - ibatix_menuiserie_installation
+  - ibatix_note_pac_chromium
+  - ibatix_user_menu
   - ibatix_login_brand
   - ibatix_design_devis
   - ibatix_design_crm
