@@ -65,6 +65,7 @@ ibatix:
   - ibatix_partner_confidentialite
   - ibatix_pdf_template
   - ibatix_portal
+  - ibatix_delegataire_portal
   - ibatix_projet
   - ibatix_rdv
   - ibatix_reception
