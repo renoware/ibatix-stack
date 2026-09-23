@@ -79,6 +79,9 @@ ibatix:
 oca-partner-contact:
   - partner_firstname
 
+oca-server-auth:
+  - impersonate_login
+
 muk-web:
   - muk_web_appsbar
   - muk_web_chatter
