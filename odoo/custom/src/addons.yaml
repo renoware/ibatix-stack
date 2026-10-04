@@ -1,0 +1,96 @@
+ibatix:
+  - ibatix_theme
+  - ibatix_home
+  - ibatix_design
+  - ibatix_veille
+  - ibatix_ampleur
+  - ibatix_conformite
+  - ibatix_fluides
+  - ibatix_menuiserie_installation
+  - ibatix_note_pac_chromium
+  - ibatix_user_menu
+  - ibatix_login_brand
+  - ibatix_design_devis
+  - ibatix_design_crm
+  - ibatix_design_chantier
+  - ibatix_design_dispatch
+  - ibatix_design_journee
+  - ibatix_design_produit
+  - ibatix_design_rdv
+  - ibatix_menuiserie
+  - ibatix_champs
+  - ibatix_brands
+  - ibatix_catalogue
+  - ibatix_identity
+  - ibatix_adresse
+  - ibatix_cadastre
+  - ibatix_intelligence
+  - ibatix_siret
+  - ibatix_rge
+  - ibatix_gov_api
+  - ibatix_document
+  - ibatix_document_template
+  - ibatix_pim_client
+  - ibatix_usage_client
+  - ibatix_solar
+  - ibatix_pac
+  - ibatix_calcul_cee
+  - ibatix_mandat_anah
+  - ibatix_intervention
+  - ibatix_photos
+  - ibatix_installation
+  - ibatix_planning
+  - ibatix_visite_vt
+  - ibatix_3cl
+  - ibatix_dpe
+  - ibatix_crm
+  - ibatix_sign
+  - ibatix_einvoice
+  - ibatix_bien
+  - ibatix_abonnement
+  - ibatix_configurateur
+  - ibatix_pdfmonkey
+  - ibatix_website
+  - inies_connector
+  - objets_ibatix
+  - ibatix_chantier
+  - ibatix_chantier_solar
+  - ibatix_copilote
+  - ibatix_cvc
+  - ibatix_dechets
+  - ibatix_devis_chromium
+  - ibatix_droits
+  - ibatix_financement
+  - ibatix_appel_paiement
+  - ibatix_formation
+  - ibatix_partner_confidentialite
+  - ibatix_pdf_template
+  - ibatix_portal
+  - ibatix_delegataire_portal
+  - ibatix_projet
+  - ibatix_rdv
+  - ibatix_reception
+  - ibatix_report_chromium
+  - ibatix_rh_roles
+  - ibatix_schema_installation
+  - ibatix_tva_travaux
+  - ibatix_vendeur
+  - ibatix_whatsapp
+
+oca-partner-contact:
+  - partner_firstname
+
+oca-server-auth:
+  - impersonate_login
+
+muk-web:
+  - muk_web_appsbar
+  - muk_web_chatter
+  - muk_web_colors
+  - muk_web_dialog
+  - muk_web_group
+  - muk_web_refresh
+  - muk_web_theme
+
+ibatix-seed-data:
+  - ibatix_seed_data
