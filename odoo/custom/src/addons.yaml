@@ -62,6 +62,7 @@ ibatix:
   - ibatix_droits
   - ibatix_financement
   - ibatix_appel_paiement
+  - ibatix_contrat_entretien
   - ibatix_formation
   - ibatix_partner_confidentialite
   - ibatix_pdf_template
