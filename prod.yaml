@@ -27,6 +27,11 @@ services:
       traefik.http.routers.ibatix-app.tls.certresolver: "letsencrypt"
       traefik.http.routers.ibatix-app.service: "ibatix-app"
       traefik.http.services.ibatix-app.loadbalancer.server.port: "8069"
+      # Compression (gzip/brotli) : Odoo n'en fait pas, et sans elle le
+      # bundle JS du client web part brut (~10 Mo au lieu de ~2). PROD l'a
+      # par nginx. Images, PDF et archives sont deja compresses : exclus.
+      traefik.http.routers.ibatix-app.middlewares: "ibatix-compress"
+      traefik.http.middlewares.ibatix-compress.compress.excludedcontenttypes: "image/png,image/jpeg,image/webp,image/gif,application/pdf,application/zip,video/mp4,text/event-stream"
       # Racine du domaine -> l'espace de travail. Une instance client n'a
       # pas de site public : la page d'accueil du module `website` n'y montre
       # qu'un gabarit de demonstration. Un visiteur non connecte est envoye
