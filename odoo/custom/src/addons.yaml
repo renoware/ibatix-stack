@@ -39,6 +39,7 @@ ibatix:
   - ibatix_intervention
   - ibatix_photos
   - ibatix_installation
+  - ibatix_kit
   - ibatix_planning
   - ibatix_visite_vt
   - ibatix_3cl
