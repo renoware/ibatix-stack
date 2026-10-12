@@ -11,6 +11,7 @@ ibatix:
   - ibatix_user_menu
   - ibatix_login_brand
   - ibatix_design_devis
+  - ibatix_tableau_bord
   - ibatix_design_crm
   - ibatix_design_chantier
   - ibatix_design_dispatch
