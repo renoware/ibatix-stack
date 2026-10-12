@@ -97,3 +97,15 @@ muk-web:
 
 ibatix-seed-data:
   - ibatix_seed_data
+
+oca-helpdesk:
+  - helpdesk_mgmt
+  - helpdesk_mgmt_activity
+  - helpdesk_mgmt_crm
+  - helpdesk_mgmt_project
+  - helpdesk_mgmt_rating
+  - helpdesk_mgmt_sale
+  - helpdesk_mgmt_sla
+  - helpdesk_product
+  - helpdesk_ticket_related
+  - helpdesk_type

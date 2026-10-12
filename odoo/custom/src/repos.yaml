@@ -1,4 +1,4 @@
-# cache-bust 2026-09-23-1515 impersonate_login
+# cache-bust 2026-10-12 oca-helpdesk
 ./odoo:
   defaults:
     depth: $DEPTH_DEFAULT
@@ -53,3 +53,14 @@
   target: renoware 19.0
   merges:
     - renoware 19.0
+
+# Figé sur le commit installé sur PROD (vendor/ du monorepo, 04/10/2026) :
+# la flotte ne passe jamais devant PROD.
+./oca-helpdesk:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    oca: https://github.com/OCA/helpdesk.git
+  target: oca 19.0
+  merges:
+    - oca b4f4302b98b86c38bdac2c9cda30be38d7e53c10
