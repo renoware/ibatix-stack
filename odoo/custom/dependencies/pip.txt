@@ -20,3 +20,12 @@ pyhanko-certvalidator<0.27
 
 # PDF : ibatix_report_chromium / ibatix_devis_chromium (numérotation, fusion) — présent sur PROD, absent de l'image doodba.
 pypdf==6.10.2
+
+# Présents sur PROD, absents de l'image doodba (constaté 18/10/2026 : devis
+# IHE signé avec le cachet en pied de dernière page, cadre « Signature » vide).
+# PyMuPDF : ibatix_sign (cadre Signature du devis), ibatix_mandat_anah, ibatix_menuiserie.
+PyMuPDF==1.27.2.3
+# CairoSVG : schémas d'installation en image (ibatix_cvc, ibatix_schema_installation).
+CairoSVG==2.9.0
+# openai : transcription vocale de la visite technique (ibatix_visite_vt).
+openai==2.32.0
