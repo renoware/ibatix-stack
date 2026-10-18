@@ -17,6 +17,7 @@ ibatix:
   - ibatix_design_dispatch
   - ibatix_design_journee
   - ibatix_design_produit
+  - ibatix_design_bien
   - ibatix_design_rdv
   - ibatix_menuiserie
   - ibatix_champs
