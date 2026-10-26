@@ -19,6 +19,7 @@ ibatix:
   - ibatix_design_produit
   - ibatix_design_bien
   - ibatix_design_facture
+  - ibatix_design_cee
   - ibatix_menuiserie
   - ibatix_champs
   - ibatix_brands
