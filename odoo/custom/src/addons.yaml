@@ -68,6 +68,7 @@ ibatix:
   - ibatix_appel_paiement
   - ibatix_export_compta
   - ibatix_contrat_entretien
+  - ibatix_entretien
   - ibatix_sav
   - ibatix_formation
   - ibatix_partner_confidentialite
