@@ -78,6 +78,7 @@ ibatix:
   - ibatix_projet
   - ibatix_rdv
   - ibatix_reception
+  - ibatix_reassort
   - ibatix_report_chromium
   - ibatix_rh_roles
   - ibatix_schema_installation
