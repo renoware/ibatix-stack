@@ -81,6 +81,7 @@ ibatix:
   - ibatix_reception
   - ibatix_reassort
   - ibatix_achat_devis
+  - ibatix_leads_pub
   - ibatix_report_chromium
   - ibatix_rh_roles
   - ibatix_schema_installation
