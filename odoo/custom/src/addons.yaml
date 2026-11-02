@@ -13,6 +13,7 @@ ibatix:
   - ibatix_design_devis
   - ibatix_tableau_bord
   - ibatix_design_crm
+  - ibatix_design_lead
   - ibatix_design_chantier
   - ibatix_design_dispatch
   - ibatix_design_journee
