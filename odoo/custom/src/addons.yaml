@@ -70,6 +70,7 @@ ibatix:
   - ibatix_export_compta
   - ibatix_contrat_entretien
   - ibatix_entretien_paiement
+  - ibatix_lien_paiement
   - ibatix_entretien
   - ibatix_sav
   - ibatix_formation
