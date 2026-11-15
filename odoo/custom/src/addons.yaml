@@ -72,6 +72,7 @@ ibatix:
   - ibatix_entretien_paiement
   - ibatix_lien_paiement
   - ibatix_entretien
+  - ibatix_devis_reveil
   - ibatix_sav
   - ibatix_formation
   - ibatix_partner_confidentialite
