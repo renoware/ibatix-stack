@@ -74,6 +74,8 @@ ibatix:
   - ibatix_entretien
   - ibatix_devis_reveil
   - ibatix_sav
+  - ibatix_sms
+  - ibatix_sms_sav
   - ibatix_formation
   - ibatix_partner_confidentialite
   - ibatix_pdf_template
